@@ -9,25 +9,25 @@ import blur, { reset as blurReset } from './dances/blur.js'
 import swing, { reset as swingReset } from './dances/swing.js'
 
 class Dancer {
-  constructor() {
-    this.resets = {}
-    this.dances = {}
-    this.registerDance('size', pulse, pulseReset)
-    this.registerDance('pulse', pulse, pulseReset)
-    this.registerDance('shake', shake, shakeReset)
-    this.registerDance('jump', jump, jumpReset)
-    this.registerDance('twist', twist, twistReset)
-    this.registerDance('vanish', vanish, vanishReset)
-    this.registerDance('color', color, colorReset)
-    this.registerDance('radius', radius, radiusReset)
-    this.registerDance('blur', blur, blurReset)
-    this.registerDance('swing', swing, swingReset)
-  }
+	constructor() {
+		this.resets = {}
+		this.dances = {}
+		this.registerDance('size', pulse, pulseReset)
+		this.registerDance('pulse', pulse, pulseReset)
+		this.registerDance('shake', shake, shakeReset)
+		this.registerDance('jump', jump, jumpReset)
+		this.registerDance('twist', twist, twistReset)
+		this.registerDance('vanish', vanish, vanishReset)
+		this.registerDance('color', color, colorReset)
+		this.registerDance('radius', radius, radiusReset)
+		this.registerDance('blur', blur, blurReset)
+		this.registerDance('swing', swing, swingReset)
+	}
 
-  registerDance(type, dance, reset = () => {}) {
-    this.dances[type] = dance
-    this.resets[type] = reset
-  }
+	registerDance(type, dance, reset = () => {}) {
+		this.dances[type] = dance
+		this.resets[type] = reset
+	}
 
   dance(type, className, ratio, options) {
     let dance = type

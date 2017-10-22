@@ -58,14 +58,14 @@ class Player {
     this.gain.gain.value = value
   }
 
-  plugMicrophone = () => {
-    return this.getMicrophoneStream().then(stream => {
-      this.audio = stream
-      this.currentInputType = this.inputTypeList['STREAM']
-      this.source = this.audioCtx.createMediaStreamSource(stream)
-      this.connectSource(this.source)
-    })
-  }
+	plugMicrophone = () => {
+		return this.getMicrophoneStream().then(stream => {
+			this.audio = stream
+			this.currentInputType = this.inputTypeList['STREAM']
+			this.source = this.audioCtx.createMediaStreamSource(stream)
+			this.connectSource(this.source)
+		})
+	}
 
   getMicrophoneStream = () => {
     navigator.getUserMedia =

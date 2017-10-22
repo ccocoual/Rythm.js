@@ -11,5 +11,5 @@ export default (elem, value, options = {}) => {
 }
 
 export const reset = elem => {
-  elem.style.filter = ''
+	elem.style.filter = ''
 }
