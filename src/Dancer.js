@@ -7,6 +7,7 @@ import color, { reset as colorReset } from './dances/color.js'
 import radius, { reset as radiusReset } from './dances/radius.js'
 import blur, { reset as blurReset } from './dances/blur.js'
 import swing, { reset as swingReset } from './dances/swing.js'
+import haloColor, { reset as haloColorReset } from './dances/halo-color.js'
 
 class Dancer {
 	constructor() {
@@ -22,6 +23,7 @@ class Dancer {
 		this.registerDance('radius', radius, radiusReset)
 		this.registerDance('blur', blur, blurReset)
 		this.registerDance('swing', swing, swingReset)
+		this.registerDance('haloColor', haloColor, haloColorReset)
 	}
 
 	registerDance(type, dance, reset = () => {}) {

@@ -51,6 +51,15 @@ window.onload = function() {
 	rythm.addRythm('swing3', 'swing', 0, 10, { direction: 'left' })
 	rythm.addRythm('swing4', 'swing', 0, 10, { radius: 10 })
 	rythm.addRythm('thanks', 'shake', 0, 10, { min: -10, max: 10 })
+	rythm.addRythm('halo1', 'haloColor', 0, 10)
+	rythm.addRythm('halo2', 'haloColor', 0, 10, {
+		from: [0, 0, 255],
+		to: [255, 0, 255],
+	})
+	rythm.addRythm('halo3', 'haloColor', 0, 10, {
+		from: [255, 255, 0],
+		to: [255, 0, 0],
+	})
 	rythm.addRythm('contributor-avatar', 'pulse', 0, 10, { min: 0.5, max: 1.1 })
 	rythm.addRythm('contributor-login-link', 'jump', 0, 10, { min: -15, max: 0 })
 
