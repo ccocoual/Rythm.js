@@ -20,6 +20,8 @@ export default class Rythm {
 
   setMusic = url => this.player.setMusic(url)
 
+  plugMicrophone = () => this.player.plugMicrophone()
+
   setGain = value => this.player.setGain(value)
 
   connectSource = source => this.player.connectSource(source)
@@ -32,6 +34,13 @@ export default class Rythm {
       nbValue,
       options,
     })
+  }
+
+  start = () => {
+    this.stopped = false
+    this.player.start()
+    this.analyser.reset()
+    this.renderRythm()
   }
 
   renderRythm = () => {
