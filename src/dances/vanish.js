@@ -10,5 +10,5 @@ export default (elem, value, options = {}) => {
 }
 
 export const reset = elem => {
-	elem.style.opacity = ''
+  elem.style.opacity = ''
 }

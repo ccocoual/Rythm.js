@@ -1,8 +1,8 @@
 const coefficientMap = {
-	up: -1,
-	down: 1,
-	left: 1,
-	right: -1,
+  up: -1,
+  down: 1,
+  left: 1,
+  right: -1,
 }
 
 export default (elem, value, options = {}) => {
@@ -25,5 +25,5 @@ export default (elem, value, options = {}) => {
 }
 
 export const reset = elem => {
-	elem.style.transform = ''
+  elem.style.transform = ''
 }
