@@ -41,6 +41,15 @@ window.onload = function() {
     from: [255, 255, 0],
     to: [255, 0, 0],
   })
+  rythm.addRythm('borderColor1', 'borderColor', 0, 10)
+  rythm.addRythm('borderColor2', 'borderColor', 0, 10, {
+    from: [0, 0, 255],
+    to: [255, 0, 255],
+  })
+  rythm.addRythm('borderColor3', 'borderColor', 0, 10, {
+    from: [255, 255, 0],
+    to: [255, 0, 0],
+  })
   rythm.addRythm('radius1', 'radius', 0, 10, { min: 0, max: 30 })
   rythm.addRythm('radius2', 'radius', 0, 10, { reverse: true, min: 0, max: 30 })
   rythm.addRythm('blur1', 'blur', 0, 10)
@@ -50,7 +59,6 @@ window.onload = function() {
   rythm.addRythm('swing2', 'swing', 0, 10, { curve: 'up' })
   rythm.addRythm('swing3', 'swing', 0, 10, { direction: 'left' })
   rythm.addRythm('swing4', 'swing', 0, 10, { radius: 10 })
-  rythm.addRythm('thanks', 'shake', 0, 10, { min: -10, max: 10 })
   rythm.addRythm('halo1', 'halo', 0, 10)
   rythm.addRythm('halo2', 'halo', 0, 10, {
     from: [0, 0, 255],
@@ -60,8 +68,11 @@ window.onload = function() {
     from: [255, 255, 0],
     to: [255, 0, 0],
   })
+  rythm.addRythm('kern1', 'kern', 0, 10, { min: -5, max: 5 })
+  rythm.addRythm('kern2', 'kern', 0, 10, { min: -5, max: 5, reverse: true })
+  rythm.addRythm('thanks', 'shake', 0, 10, { min: -10, max: 10 })
   rythm.addRythm('contributor-avatar', 'pulse', 0, 10, { min: 0.5, max: 1.1 })
-  rythm.addRythm('contributor-login-link', 'jump', 0, 10, { min: -15, max: 0 })
+  rythm.addRythm('contributor-login-link', 'kern', 0, 10, { min: 0, max: 5 })
 
   var onMicClick = function() {
     if (rythm.stopped === false) {
@@ -103,7 +114,7 @@ window.onload = function() {
 
   var bottomPlayerShow = false
   var showPoint = 205
-  document.addEventListener('scroll', function() {
+  var onScroll = function() {
     var body = document.body
     var bottomPlayer = document.getElementById('playerBottom')
     var shouldShow = !bottomPlayerShow && body.scrollTop > showPoint
@@ -115,5 +126,7 @@ window.onload = function() {
       bottomPlayerShow = false
       bottomPlayer.className = ''
     }
-  })
+  }
+  onScroll()
+  document.addEventListener('scroll', onScroll)
 }

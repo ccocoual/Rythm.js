@@ -166,6 +166,9 @@ Here are the build in dances and their options
   + min : Minimum value (between 0 and 1) given to `opacity`. Default: `0`
   + max : Maximum value (between 0 and 1) given to `opacity`. Default: `1`
   + reverse : Boolean to reverse the effect. Default `false` (Higher the pulse is, the more visible it will be)
++ borderColor
+  + from : Array of integer between 0 and 255 corresponding to a RGB color. Default: `[0,0,0]`
+  + to : Array of integer between 0 and 255 corresponding to a RGB color. Default: `[255,255,255]`
 + color
   + from : Array of integer between 0 and 255 corresponding to a RGB color. Default: `[0,0,0]`
   + to : Array of integer between 0 and 255 corresponding to a RGB color. Default: `[255,255,255]`
@@ -181,6 +184,10 @@ Here are the build in dances and their options
   + curve : Whether the element should curve `up` or `down`. Default: `down`
   + direction : Whether the element should swing `right` or `left`. Default: `right`
   + radius : How far the element will swing. Default: `20`
++ kern
+  + min : Minimum value given to `letter-spacing`. Default: `0`
+  + max : Maximum value given to `letter-spacing`. Default: `25`
+  + reverse : Boolean to make effect from max to min. Default: `false
 
 To see each visual effect, you can go to the [Demo](https://okazari.github.io/Rythm.js/)
 
